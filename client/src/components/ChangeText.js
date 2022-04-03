@@ -10,14 +10,28 @@ function ChangeText(props, csvData){
     const [data, setData] = useState([]);
 
     // Pharsing CSV file
+    const PharsingFunction =() => {
+        const newLine = /\r\n|\n/;
+        const comma = /,/;
+        
+        const separateLines = parsingData.split(newLine);
+        const list = [];
+        for(let i=0; i<separateLines.length; i++){
+            const row = separateLines[i].split(comma);
+            
+        }
 
+
+        return parsedText;
+    }
+    
 
     // Change Text 
     const separator = /\n/;
     const dataStringLines = stringData.split(separator);
     const processComparing = () => {
-        for(i=0; i<dataStringLines.length; i++) {
-
+        for(let i=0; i<dataStringLines.length; i++) {
+            for(let j=0; j<)
         }
     }
     
