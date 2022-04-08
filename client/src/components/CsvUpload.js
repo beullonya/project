@@ -57,7 +57,9 @@ function CsvUpload() {
         const bstr = evt.target.result;
         const wb = XLSX.read(bstr, { type: 'binary' });
         /* Get first worksheet */
-        const wsname = wb.SheetNames[0];
+        const wsname = wb.SheetNames[
+          
+          0];
         const ws = wb.Sheets[wsname];
         /* Convert array of arrays */
         const data = XLSX.utils.sheet_to_csv(ws,  { header: 1 });
